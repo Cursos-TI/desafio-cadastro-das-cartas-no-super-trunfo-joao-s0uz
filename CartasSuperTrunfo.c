@@ -100,7 +100,20 @@ int main() {
     float densidade_carta2 = populacao2 / area2;
     float pib_capita_carta2 = pib2 / populacao2;
 
+    //CALCULO PARA SABER A MELHOR CARTA
 
+    float supercarta_1 = populacao + area + pib + pontos_turisticos + densidade_carta1 + pib_capita_carta1;
+    float supercarta_2 = populacao2 + area2 + pib2 + pontos_turisticos2 + densidade_carta2 + pib_capita_carta2;
+
+    //COMPARAÇOES ENTRE AS CARTAS
+
+     int comparacao_pop = populacao > populacao2;
+     int comparacao_area = area > area2;
+     int comparacao_pib = pib > pib2;
+     int comparacao_pontos = pontos_turisticos > pontos_turisticos2;
+     int comparacao_dens = densidade_carta1 > densidade_carta2;
+     int comparacao_pib_capita = pib_capita_carta1 > pib_capita_carta2;
+     int comparacao_supercarta = supercarta_1 > supercarta_2;
         
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
@@ -129,4 +142,16 @@ int main() {
     printf("Número de Pontos Turísticos: %d\n", pontos_turisticos2);
     printf("Densidade Populacional: %f hab/km2\n", densidade_carta2);
     printf("PIB per Capita: %f\n\n", pib_capita_carta2);
+
+    // EXIBIR COMPARAÇÕES ENTRE AS CARTAS
+
+    printf("\nComparação de Cartas:\n");
+    printf("População: %d\n", comparacao_pop);
+    printf("Área: %d\n", comparacao_area);
+    printf("PIB: %d\n", comparacao_pib);
+    printf("Pontos Turísticos: %d\n", comparacao_pontos);
+    printf("Densidade Populacional: %d\n", comparacao_dens);
+    printf("PIB per Capita: %d\n", comparacao_pib_capita);
+    printf("Super Poder: %d\n", comparacao_supercarta);
+    
 }   
